@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#080b0a">
+<title>Temanku Psikopat - Beta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="game"></div>
+
+<section id="mainMenu" class="screen">
+  <div class="menu-content">
+    <div class="beta">BETA VERSION 0.1</div>
+    <h1>TEMANKU<span>PSIKOPAT</span></h1>
+    <p class="tagline">JANGAN PERCAYA SIAPAPUN.</p>
+    <nav>
+      <button id="playButton">PLAY</button>
+      <button id="settingsButton">SETTINGS</button>
+      <button id="creditButton">CREDIT</button>
+    </nav>
+    <div class="menu-footer">AN INDONESIAN HORROR EXPERIENCE</div>
+  </div>
+</section>
+
+<section id="settingsPanel" class="modal hidden">
+  <div class="modal-content">
+    <h2>SETTINGS</h2>
+    <label class="setting-row">Sensitivity <input id="sensitivity" type="range" min="0.3" max="2.5" step="0.1" value="1"></label>
+    <button class="text-button" data-close>BACK</button>
+  </div>
+</section>
+
+<section id="creditPanel" class="modal hidden">
+  <div class="modal-content">
+    <h2>CREDIT</h2>
+    <p>TEMANKU PSIKOPAT</p>
+    <p>INDONESIAN HORROR GAME</p>
+    <p>BETA VERSION 0.1</p>
+    <button class="text-button" data-close>BACK</button>
+  </div>
+</section>
+
+<div id="hud" class="hidden">
+  <div id="objective">OBJECTIVE: BANGUN DAN KELUAR DARI KAMAR</div>
+  <div id="crosshair">+</div>
+  <div id="interactionHint"></div>
+  <div id="controlsHint">WASD: BERGERAK · MOUSE: LIHAT · E: INTERAKSI · SHIFT: BERLARI</div>
+</div>
+
+<div id="dialogueBox" class="hidden">
+  <div class="speaker">AKU</div>
+  <p id="dialogueText"></p>
+  <div class="dialogue-footer">TEKAN SPACE UNTUK MELANJUTKAN</div>
+</div>
+
+<div id="fade"></div>
+<div id="rotateNotice">
+  <div class="rotate-phone"></div>
+  <p>PUTAR PERANGKAT KE LANDSCAPE</p>
+</div>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
